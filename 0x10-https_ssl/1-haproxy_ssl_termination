@@ -38,12 +38,12 @@ frontend alpheus-tema-frontend
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend clickviral-backend
+        default_backend alpheus-tema-backend
 
 frontend alpheus-tema-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+        default_backend alpheus-tema-backend
 
 backend alpheus-tema-backend
         balance roundrobin
