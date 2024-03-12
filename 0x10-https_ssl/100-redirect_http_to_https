@@ -40,7 +40,7 @@ frontend alpheus-tema-frontend
         http-request set-header X_Forwarded-Proto http
         default_backend clickviral-backend
 
-frontend allpheus-tema-frontend-https
+frontend alpheus-tema-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend clickviral-backend
@@ -48,5 +48,5 @@ frontend allpheus-tema-frontend-https
 
 backend alpheus-tema-backend
         balance roundrobin
-        server 151666-web-01 54.146.80.232 check
-        server 151666-web-02 54.234.92.179 check
+        server 457240-web-01 54.146.80.232 check
+        server 457240-web-02 54.234.92.179 check

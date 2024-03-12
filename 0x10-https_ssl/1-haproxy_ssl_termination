@@ -47,5 +47,5 @@ frontend alpheus-tema-frontend-https
 
 backend alpheus-tema-backend
         balance roundrobin
-        server 151666-web-01 54.146.80.232 check
-        server 151666-web-02 54.234.92.179 check
+        server 457240-web-01 54.146.80.232 check
+        server 457240-web-02 54.234.92.179 check
