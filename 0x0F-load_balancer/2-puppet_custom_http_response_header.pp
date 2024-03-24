@@ -1,10 +1,8 @@
 # 2-puppet_custom_http_response_header.pp
-
 # Install Nginx package
 package { 'nginx':
   ensure => installed,
 }
-
 # Define a custom fact to get the hostname
 Facter.add('custom_hostname') do
   setcode 'hostname'

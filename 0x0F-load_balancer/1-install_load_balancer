@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # install load balancer
 
+=======
+# Update package lists
+sudo apt-get update
+>>>>>>> d1ecfdebbf5986d95bd6e46f88407c3e106b9e52
 
 echo -e "Updating and doing some minor checks...\n"
 
@@ -40,6 +45,7 @@ frontend alpheustema-tech-frontend
 
 backend alpheustema-tech-backend
     balance roundrobin
+<<<<<<< HEAD
     server 151666-web-01 54.236.26.166 check
     server 151666-web-02 100.26.226.202 check
 "
@@ -49,6 +55,11 @@ echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
 
 # enable haproxy to be started by init script
 echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
+=======
+    server web-01 web-01:80 check
+    server web-02 web-02:80 check
+EOF'
+>>>>>>> d1ecfdebbf5986d95bd6e46f88407c3e106b9e52
 
 echo "configured - Roundrobin On web-01 & web-02"
 

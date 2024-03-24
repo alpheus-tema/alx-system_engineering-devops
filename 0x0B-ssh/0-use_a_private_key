@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
+# using ssh to connect to a server
+=======
 # This script connects to the server using ssh with a private key
+>>>>>>> 090a5aef861585e7583275aa7ddf6dd98737efee
 
 ssh ubuntu -i ~/.ssh/school
