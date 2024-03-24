@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Update package lists
+# updating packages
 sudo apt-get update
 
 # Install HAProxy
