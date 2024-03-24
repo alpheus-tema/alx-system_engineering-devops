@@ -24,4 +24,3 @@ sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 
 # Restart HAProxy
 sudo systemctl restart haproxy
-
