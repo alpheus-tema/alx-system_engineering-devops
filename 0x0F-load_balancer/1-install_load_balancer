@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-# updating packages
+#updating packages
 sudo apt-get update
 
 # Install HAProxy
@@ -18,7 +17,6 @@ backend http_back
     server web-01  web-01:80 check
     server web-02  web-02:80 check
 EOF'
-
 # Enable HAProxy init script
 sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 
