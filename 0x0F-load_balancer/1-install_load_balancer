@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # updating packages
 sudo apt-get update
 
