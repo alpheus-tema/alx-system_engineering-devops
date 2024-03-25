@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#updating packages
+
+# Updating packages
 sudo apt-get update
 
 # Install HAProxy
@@ -16,9 +17,6 @@ backend http_back
     balance roundrobin
     server web-01 web-01:80 check
     server web-02 web-02:80 check
-
-    server web-01  web-01:80 check
-    server web-02  web-02:80 check
 
 EOF'
 
