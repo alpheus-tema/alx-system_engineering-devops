@@ -7,7 +7,6 @@ package { 'nginx':
 Facter.add('custom_hostname') do
   setcode 'hostname'
 end
-
 # Define a custom HTTP header in the Nginx configuration
 file { '/etc/nginx/sites-available/default':
   ensure  => file,
@@ -25,7 +24,7 @@ server {
         try_files $uri $uri/ =404;
     }
 
-    add_header X-Served-By $::custom_hostname;
+    add_header X-Served-By $:custom_hostname;
 }
   ",
   notify  => Service['nginx'],
