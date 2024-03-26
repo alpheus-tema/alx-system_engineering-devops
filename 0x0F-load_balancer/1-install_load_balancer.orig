@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-# Update package lists
-=======
 #updating packages
->>>>>>> 85cb7e27dee9093299e95eca2a40264626f7a643
-=======
-# Updating packages
->>>>>>> d74f027f0758c728e78b41b3cec78b50570fbe19
 sudo apt-get update
 
 # Install HAProxy
@@ -23,11 +14,14 @@ frontend http_front
 
 backend http_back
     balance roundrobin
+<<<<<<< HEAD
     server web-01 web-01:80 check
     server web-02 web-02:80 check
-
+=======
+    server web-01  web-01:80 check
+    server web-02  web-02:80 check
+>>>>>>> 85cb7e27dee9093299e95eca2a40264626f7a643
 EOF'
-
 # Enable HAProxy init script
 sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 

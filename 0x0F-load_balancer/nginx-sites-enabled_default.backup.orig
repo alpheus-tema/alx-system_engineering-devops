@@ -20,6 +20,7 @@
 #
 server {
 	listen 80 default_server;
+<<<<<<< HEAD
 	error_page 404 /404.html;
 	location = /404.html {
 		root /var/www/html;
@@ -51,6 +52,7 @@ server {
 	index index.html index.htm index.nginx-debian.html;
 
 	server_name _;
+<<<<<<< HEAD
         add_header x-served-By 457240-web-01;
 	rewrite ^/redirect_me https://github.com/besthor permanent;
 =======
